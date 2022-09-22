@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="form">
+            <form action="">
+                <div class="form-group row d-flex justify-content-between">
+                    <div class="col-3">
+                        <label for="title" class="me-3">Title</label>
+                        <input type="text" id='title' class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <label for="deadline" class="me-3">Deadline</label>
+                        <input type="date" min="2022-01-01" max="2025-12-12" id="deadline" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <label for="status" class="me-3">Status</label>
+                        <select class="form-select" name="status" id="status">
+                            <option value="todo">To do</option>
+                            <option value="in_progress">In progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="" class="me-3"></label>
+                        <div class="form-group btn_add">
+                            <button type="button" class="btn btn-primary">Add</button>
+                            <button type="button" onclick="resetInput()" class="btn btn-outline-danger">Clear</button>
+                        </div>
+                        <div hidden class="form-group btn_edit">
+                            <button type="button" class="btn btn-primary">Update</button>
+                            <button type="button" class="btn btn-outline-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="todo_list">
+            <ul>
+                <li>
+                    <strong>Title</strong>
+                    <strong>Deadline</strong>
+                    <strong>Status</strong>
+                    <strong>Action</strong>
+                </li>
+            </ul>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div id="app2">
+        <h2 class="title-search">Search</h2>
+        <div class="search-form">
+            <div>
+                <label for="title_search" class="me-3">Title</label>
+                <input type="text" id='title_search' class="form-control">
+            </div>
+            <div class="my-3 d-flex">
+                <div class="me-3">
+                    <label for="deadline_search_from">From</label>
+                    <input type="date" min="2022-01-01" max="2025-12-12" id="deadline_search_from" class="form-control">
+                </div>
+                <div class="me-3">
+                    <label for="deadline_search_to">To</label>
+                    <input type="date" min="2022-01-01" max="2025-12-12" id="deadline_search_to" class="form-control">
+                </div>
+            </div>
+            <div>
+                <label for="status" class="me-3">Status</label>
+                <select class="form-select" name="status_search" id="status_search">
+                    <option>Choose status</option>
+                    <option value="todo">To do</option>
+                    <option value="in_progress">In progress</option>
+                    <option value="done">Done</option>
+                </select>
+            </div>
+            <div class="form-group btn_add my-4">
+                <button type="button" onclick="handleSearch()" class="btn btn-primary">Search</button>
+                <button type="button" onclick="clearSearch()" class="btn btn-outline-danger">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html> 

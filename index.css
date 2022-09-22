@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #736f6f;
+}
+*::-webkit-resizer{
+    width: 4px;
+    width: 800px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-image: url('https://st.quantrimang.com/photos/image/2019/04/24/multiplebackground-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset
+}
+
+#app{
+    width: 850px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #999;
+}
+
+#app2{
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 20px 0;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #999;
+}
+ 
+.form{
+    padding: 20px ;
+    border-bottom: 2px solid #333;
+}
+
+.search-form{
+    padding: 20px;
+} 
+
+#todo_list ul {
+    list-style: none;
+    padding: 0;
+    /* padding-left: 20px; */
+}
+
+#todo_list ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 1px solid #999;
+}
+
+#todo_list ul:first-child{
+    margin-bottom: 0;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+}
+
+#todo_list ul:last-child{
+    overflow-y: scroll;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    height: 350px;
+    margin-bottom: 0;
+}
+
+#todo_list ul li span,
+#todo_list ul li strong{
+    min-width: 200px;
+}
+
+#todo_list ul li span.done{
+    color: yellowgreen;
+}
+
+#todo_list ul li span.in_progress{
+    color: coral;
+}
+#todo_list ul li span.fail{
+    color: red;
+}
+
+#todo_list ul:first-child li:first-child {
+    border-bottom: 1px solid #444;
+    background-color: lightpink;
+}
+
+#todo_list ul li:last-child {
+    border-bottom: none;
+}
+
+#todo_list ul li span button{
+    height: 30px;
+    padding: 0 15px !important;
+}
+
+.title-search{
+    z-index: 1000;
+    text-align: center;
+    /* background-color: #736f6f; */
+    position: relative;
+}
+
+/* .title-search::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    height: 3px;
+    background-color: #333;
+}
+.title-search::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: #333;
+} */
